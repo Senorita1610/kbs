@@ -1,0 +1,37 @@
+PART 1. Dữ liệu
+  1) Tập luật
+    R1: S4,S18,S19->D07
+    R2: S2,S5,S7,S19->D08
+    R3: S2,S5,S8,S21->D09
+    R4: S1,S5,S8,S21->D09
+    R5: S1,S5,S9,S22->D10
+    R6: S2,S5,S9,S22->D10
+    R7: S5,S15,S22->D11
+    R8: S5,S16,S22->D12
+    R9: S6,S7,S20->D13
+    R10: S6,S7,S22->D14
+    R11: S5,S7,S19,S24->D18
+    R12: S5,S7,S20,S24->D19
+    R13: S5,S7,S21,S24->D20
+    R14: S5,S8,S21,S24->D20
+    R15: S5,S8,S22,S24->D21
+    R16: S5,S9,S22,S24->D21
+    R17: S5,S8,S23,S24->D22
+    R18: S5,S9,S23,S24->D22
+
+  2) Thông tin người dùng đang có
+    S15, S2, S5, S7.
+
+  3) Lịch tập dự đoán
+    D08.
+
+PART 2. Suy diễn
+  1) Goal D08. Tìm thấy luật R2:S2,S5,S7,S19->D08. Các goals mới cần chứng mình là S2, S5, S7, S19.
+  2) -Goal S2. Cập nhật triệu chứng S2, bởi vì được tìm thấy trong tập triệu chứng gốc S15, S2, S5, S7. Trả về thành công.
+  3) -Goal S5. Cập nhật triệu chứng S5, bởi vì được tìm thấy trong tập triệu chứng gốc S15, S2, S5, S7. Trả về thành công.
+  4) -Goal S7. Cập nhật triệu chứng S7, bởi vì được tìm thấy trong tập triệu chứng gốc S15, S2, S5, S7. Trả về thành công.
+  5) -Goal S19. Không có luật nào để suy diễn/không có triệu chứng này ban đầu. Trả về thất bại.
+  6) Goal D08. Không có luật nào để suy diễn/không có triệu chứng này ban đầu. Trả về thất bại.
+
+PART 3. Kết quả
+  1) Goal D08 không được chứng minh.
