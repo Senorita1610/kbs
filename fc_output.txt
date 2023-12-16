@@ -1,0 +1,227 @@
+PART 1. Luật
+  1) Productions
+    R01: S1->D09
+    R02: S1->D10
+    R24: S15->D11
+    R23: S16->D12
+    R25: S18->D07
+    R26: S19->D08
+    R27: S21->D09
+    R28: S22->D10
+    R29: S22->D21
+    R30: S23->D22
+    R03: S4->D07
+    R04: S5->D08
+    R05: S5->D09
+    R06: S5->D10
+    R07: S5->D18
+    R08: S6->D13
+    R09: S6->D14
+    R10: S7->D08
+    R11: S7->D13
+    R12: S7->D14
+    R13: S7->D18
+    R14: S7->D19
+    R15: S7->D20
+    R16: S8->D09
+    R17: S8->D20
+    R18: S8->D21
+    R19: S8->D22
+    R20: S9->D10
+    R21: S9->D21
+    R22: S9->D22
+
+  2) Facts S11, S2, S5, S7.
+
+  3) Goal None
+
+PART 2. Suy Diễn
+  1 ITERATION
+    R01: S1->D09 Không được áp dụng, vì thiếu fact: S1
+    R02: S1->D10 Không được áp dụng, vì thiếu fact: S1
+    R24: S15->D11 Không được áp dụng, vì thiếu fact: S15
+    R23: S16->D12 Không được áp dụng, vì thiếu fact: S16
+    R25: S18->D07 Không được áp dụng, vì thiếu fact: S18
+    R26: S19->D08 Không được áp dụng, vì thiếu fact: S19
+    R27: S21->D09 Không được áp dụng, vì thiếu fact: S21
+    R28: S22->D10 Không được áp dụng, vì thiếu fact: S22
+    R29: S22->D21 Không được áp dụng, vì thiếu fact: S22
+    R30: S23->D22 Không được áp dụng, vì thiếu fact: S23
+    R03: S4->D07 Không được áp dụng, vì thiếu fact: S4
+    R04: S5->D08 được áp dụng. Cập nhật flag1. Facts S11, S2, S5, S7 suy ra D08.
+
+  2 ITERATION
+    R01: S1->D09 Không được áp dụng, vì thiếu fact: S1
+    R02: S1->D10 Không được áp dụng, vì thiếu fact: S1
+    R24: S15->D11 Không được áp dụng, vì thiếu fact: S15
+    R23: S16->D12 Không được áp dụng, vì thiếu fact: S16
+    R25: S18->D07 Không được áp dụng, vì thiếu fact: S18
+    R26: S19->D08 không áp dụng, vì D08 nắm trong số các facts. Cập nhật flag2.
+    R27: S21->D09 Không được áp dụng, vì thiếu fact: S21
+    R28: S22->D10 Không được áp dụng, vì thiếu fact: S22
+    R29: S22->D21 Không được áp dụng, vì thiếu fact: S22
+    R30: S23->D22 Không được áp dụng, vì thiếu fact: S23
+    R03: S4->D07 Không được áp dụng, vì thiếu fact: S4
+    R04: S5->D08 bỏ qua, vì flag1 đã được cập nhật.
+    R05: S5->D09 được áp dụng. Cập nhật flag1. Facts S11, S2, S5, S7 suy ra D08, D09.
+
+  3 ITERATION
+    R01: S1->D09 không áp dụng, vì D09 nắm trong số các facts. Cập nhật flag2.
+    R02: S1->D10 Không được áp dụng, vì thiếu fact: S1
+    R24: S15->D11 Không được áp dụng, vì thiếu fact: S15
+    R23: S16->D12 Không được áp dụng, vì thiếu fact: S16
+    R25: S18->D07 Không được áp dụng, vì thiếu fact: S18
+    R26: S19->D08 bỏ qua, vì flag2 đã được cập nhật.
+    R27: S21->D09 không áp dụng, vì D09 nắm trong số các facts. Cập nhật flag2.
+    R28: S22->D10 Không được áp dụng, vì thiếu fact: S22
+    R29: S22->D21 Không được áp dụng, vì thiếu fact: S22
+    R30: S23->D22 Không được áp dụng, vì thiếu fact: S23
+    R03: S4->D07 Không được áp dụng, vì thiếu fact: S4
+    R04: S5->D08 bỏ qua, vì flag1 đã được cập nhật.
+    R05: S5->D09 bỏ qua, vì flag1 đã được cập nhật.
+    R06: S5->D10 được áp dụng. Cập nhật flag1. Facts S11, S2, S5, S7 suy ra D08, D09, D10.
+
+  4 ITERATION
+    R01: S1->D09 bỏ qua, vì flag2 đã được cập nhật.
+    R02: S1->D10 không áp dụng, vì D10 nắm trong số các facts. Cập nhật flag2.
+    R24: S15->D11 Không được áp dụng, vì thiếu fact: S15
+    R23: S16->D12 Không được áp dụng, vì thiếu fact: S16
+    R25: S18->D07 Không được áp dụng, vì thiếu fact: S18
+    R26: S19->D08 bỏ qua, vì flag2 đã được cập nhật.
+    R27: S21->D09 bỏ qua, vì flag2 đã được cập nhật.
+    R28: S22->D10 không áp dụng, vì D10 nắm trong số các facts. Cập nhật flag2.
+    R29: S22->D21 Không được áp dụng, vì thiếu fact: S22
+    R30: S23->D22 Không được áp dụng, vì thiếu fact: S23
+    R03: S4->D07 Không được áp dụng, vì thiếu fact: S4
+    R04: S5->D08 bỏ qua, vì flag1 đã được cập nhật.
+    R05: S5->D09 bỏ qua, vì flag1 đã được cập nhật.
+    R06: S5->D10 bỏ qua, vì flag1 đã được cập nhật.
+    R07: S5->D18 được áp dụng. Cập nhật flag1. Facts S11, S2, S5, S7 suy ra D08, D09, D10, D18.
+
+  5 ITERATION
+    R01: S1->D09 bỏ qua, vì flag2 đã được cập nhật.
+    R02: S1->D10 bỏ qua, vì flag2 đã được cập nhật.
+    R24: S15->D11 Không được áp dụng, vì thiếu fact: S15
+    R23: S16->D12 Không được áp dụng, vì thiếu fact: S16
+    R25: S18->D07 Không được áp dụng, vì thiếu fact: S18
+    R26: S19->D08 bỏ qua, vì flag2 đã được cập nhật.
+    R27: S21->D09 bỏ qua, vì flag2 đã được cập nhật.
+    R28: S22->D10 bỏ qua, vì flag2 đã được cập nhật.
+    R29: S22->D21 Không được áp dụng, vì thiếu fact: S22
+    R30: S23->D22 Không được áp dụng, vì thiếu fact: S23
+    R03: S4->D07 Không được áp dụng, vì thiếu fact: S4
+    R04: S5->D08 bỏ qua, vì flag1 đã được cập nhật.
+    R05: S5->D09 bỏ qua, vì flag1 đã được cập nhật.
+    R06: S5->D10 bỏ qua, vì flag1 đã được cập nhật.
+    R07: S5->D18 bỏ qua, vì flag1 đã được cập nhật.
+    R08: S6->D13 Không được áp dụng, vì thiếu fact: S6
+    R09: S6->D14 Không được áp dụng, vì thiếu fact: S6
+    R10: S7->D08 không áp dụng, vì D08 nắm trong số các facts. Cập nhật flag2.
+    R11: S7->D13 được áp dụng. Cập nhật flag1. Facts S11, S2, S5, S7 suy ra D08, D09, D10, D18, D13.
+
+  6 ITERATION
+    R01: S1->D09 bỏ qua, vì flag2 đã được cập nhật.
+    R02: S1->D10 bỏ qua, vì flag2 đã được cập nhật.
+    R24: S15->D11 Không được áp dụng, vì thiếu fact: S15
+    R23: S16->D12 Không được áp dụng, vì thiếu fact: S16
+    R25: S18->D07 Không được áp dụng, vì thiếu fact: S18
+    R26: S19->D08 bỏ qua, vì flag2 đã được cập nhật.
+    R27: S21->D09 bỏ qua, vì flag2 đã được cập nhật.
+    R28: S22->D10 bỏ qua, vì flag2 đã được cập nhật.
+    R29: S22->D21 Không được áp dụng, vì thiếu fact: S22
+    R30: S23->D22 Không được áp dụng, vì thiếu fact: S23
+    R03: S4->D07 Không được áp dụng, vì thiếu fact: S4
+    R04: S5->D08 bỏ qua, vì flag1 đã được cập nhật.
+    R05: S5->D09 bỏ qua, vì flag1 đã được cập nhật.
+    R06: S5->D10 bỏ qua, vì flag1 đã được cập nhật.
+    R07: S5->D18 bỏ qua, vì flag1 đã được cập nhật.
+    R08: S6->D13 không áp dụng, vì D13 nắm trong số các facts. Cập nhật flag2.
+    R09: S6->D14 Không được áp dụng, vì thiếu fact: S6
+    R10: S7->D08 bỏ qua, vì flag2 đã được cập nhật.
+    R11: S7->D13 bỏ qua, vì flag1 đã được cập nhật.
+    R12: S7->D14 được áp dụng. Cập nhật flag1. Facts S11, S2, S5, S7 suy ra D08, D09, D10, D18, D13, D14.
+
+  7 ITERATION
+    R01: S1->D09 bỏ qua, vì flag2 đã được cập nhật.
+    R02: S1->D10 bỏ qua, vì flag2 đã được cập nhật.
+    R24: S15->D11 Không được áp dụng, vì thiếu fact: S15
+    R23: S16->D12 Không được áp dụng, vì thiếu fact: S16
+    R25: S18->D07 Không được áp dụng, vì thiếu fact: S18
+    R26: S19->D08 bỏ qua, vì flag2 đã được cập nhật.
+    R27: S21->D09 bỏ qua, vì flag2 đã được cập nhật.
+    R28: S22->D10 bỏ qua, vì flag2 đã được cập nhật.
+    R29: S22->D21 Không được áp dụng, vì thiếu fact: S22
+    R30: S23->D22 Không được áp dụng, vì thiếu fact: S23
+    R03: S4->D07 Không được áp dụng, vì thiếu fact: S4
+    R04: S5->D08 bỏ qua, vì flag1 đã được cập nhật.
+    R05: S5->D09 bỏ qua, vì flag1 đã được cập nhật.
+    R06: S5->D10 bỏ qua, vì flag1 đã được cập nhật.
+    R07: S5->D18 bỏ qua, vì flag1 đã được cập nhật.
+    R08: S6->D13 bỏ qua, vì flag2 đã được cập nhật.
+    R09: S6->D14 không áp dụng, vì D14 nắm trong số các facts. Cập nhật flag2.
+    R10: S7->D08 bỏ qua, vì flag2 đã được cập nhật.
+    R11: S7->D13 bỏ qua, vì flag1 đã được cập nhật.
+    R12: S7->D14 bỏ qua, vì flag1 đã được cập nhật.
+    R13: S7->D18 không áp dụng, vì D18 nắm trong số các facts. Cập nhật flag2.
+    R14: S7->D19 được áp dụng. Cập nhật flag1. Facts S11, S2, S5, S7 suy ra D08, D09, D10, D18, D13, D14, D19.
+
+  8 ITERATION
+    R01: S1->D09 bỏ qua, vì flag2 đã được cập nhật.
+    R02: S1->D10 bỏ qua, vì flag2 đã được cập nhật.
+    R24: S15->D11 Không được áp dụng, vì thiếu fact: S15
+    R23: S16->D12 Không được áp dụng, vì thiếu fact: S16
+    R25: S18->D07 Không được áp dụng, vì thiếu fact: S18
+    R26: S19->D08 bỏ qua, vì flag2 đã được cập nhật.
+    R27: S21->D09 bỏ qua, vì flag2 đã được cập nhật.
+    R28: S22->D10 bỏ qua, vì flag2 đã được cập nhật.
+    R29: S22->D21 Không được áp dụng, vì thiếu fact: S22
+    R30: S23->D22 Không được áp dụng, vì thiếu fact: S23
+    R03: S4->D07 Không được áp dụng, vì thiếu fact: S4
+    R04: S5->D08 bỏ qua, vì flag1 đã được cập nhật.
+    R05: S5->D09 bỏ qua, vì flag1 đã được cập nhật.
+    R06: S5->D10 bỏ qua, vì flag1 đã được cập nhật.
+    R07: S5->D18 bỏ qua, vì flag1 đã được cập nhật.
+    R08: S6->D13 bỏ qua, vì flag2 đã được cập nhật.
+    R09: S6->D14 bỏ qua, vì flag2 đã được cập nhật.
+    R10: S7->D08 bỏ qua, vì flag2 đã được cập nhật.
+    R11: S7->D13 bỏ qua, vì flag1 đã được cập nhật.
+    R12: S7->D14 bỏ qua, vì flag1 đã được cập nhật.
+    R13: S7->D18 bỏ qua, vì flag2 đã được cập nhật.
+    R14: S7->D19 bỏ qua, vì flag1 đã được cập nhật.
+    R15: S7->D20 được áp dụng. Cập nhật flag1. Facts S11, S2, S5, S7 suy ra D08, D09, D10, D18, D13, D14, D19, D20.
+
+  9 ITERATION
+    R01: S1->D09 bỏ qua, vì flag2 đã được cập nhật.
+    R02: S1->D10 bỏ qua, vì flag2 đã được cập nhật.
+    R24: S15->D11 Không được áp dụng, vì thiếu fact: S15
+    R23: S16->D12 Không được áp dụng, vì thiếu fact: S16
+    R25: S18->D07 Không được áp dụng, vì thiếu fact: S18
+    R26: S19->D08 bỏ qua, vì flag2 đã được cập nhật.
+    R27: S21->D09 bỏ qua, vì flag2 đã được cập nhật.
+    R28: S22->D10 bỏ qua, vì flag2 đã được cập nhật.
+    R29: S22->D21 Không được áp dụng, vì thiếu fact: S22
+    R30: S23->D22 Không được áp dụng, vì thiếu fact: S23
+    R03: S4->D07 Không được áp dụng, vì thiếu fact: S4
+    R04: S5->D08 bỏ qua, vì flag1 đã được cập nhật.
+    R05: S5->D09 bỏ qua, vì flag1 đã được cập nhật.
+    R06: S5->D10 bỏ qua, vì flag1 đã được cập nhật.
+    R07: S5->D18 bỏ qua, vì flag1 đã được cập nhật.
+    R08: S6->D13 bỏ qua, vì flag2 đã được cập nhật.
+    R09: S6->D14 bỏ qua, vì flag2 đã được cập nhật.
+    R10: S7->D08 bỏ qua, vì flag2 đã được cập nhật.
+    R11: S7->D13 bỏ qua, vì flag1 đã được cập nhật.
+    R12: S7->D14 bỏ qua, vì flag1 đã được cập nhật.
+    R13: S7->D18 bỏ qua, vì flag2 đã được cập nhật.
+    R14: S7->D19 bỏ qua, vì flag1 đã được cập nhật.
+    R15: S7->D20 bỏ qua, vì flag1 đã được cập nhật.
+    R16: S8->D09 không áp dụng, vì D09 nắm trong số các facts. Cập nhật flag2.
+    R17: S8->D20 không áp dụng, vì D20 nắm trong số các facts. Cập nhật flag2.
+    R18: S8->D21 Không được áp dụng, vì thiếu fact: S8
+    R19: S8->D22 Không được áp dụng, vì thiếu fact: S8
+    R20: S9->D10 không áp dụng, vì D10 nắm trong số các facts. Cập nhật flag2.
+    R21: S9->D21 Không được áp dụng, vì thiếu fact: S9
+    R22: S9->D22 Không được áp dụng, vì thiếu fact: S9
+
+PART 3. Kết quả
+  1) Kết quả là: S11, S2, S5, S7, D08, D09, D10, D18, D13, D14, D19, D20 .
+  2) Đường đi suy diễn được là: R04, R05, R06, R07, R11, R12, R14, R15
